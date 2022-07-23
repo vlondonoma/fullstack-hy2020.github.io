@@ -740,8 +740,6 @@ Hemos escrito el código para el controlador de errores entre el resto de nuestr
 
 Cambiemos el manejador de la ruta <i>/api/notes/:id</i>, para que pase el error hacia adelante con la función <em>next</em>. La función <em>next</em> se pasa al controlador como tercer parámetro:
 
-Let's change the handler for the <i>/api/notes/:id</i> route, so that it passes the error forward with the <em>next</em> function. The next function is passed to the handler as the third parameter:
-
 ```js
 app.get('/api/notes/:id', (request, response, next) => { // highlight-line
   Note.findById(request.params.id)
