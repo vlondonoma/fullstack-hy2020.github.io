@@ -95,13 +95,15 @@ ReactDOM.createRoot(document.getElementById('root')).render(<App />)
 
 Cada vista se implementa como su propio componente. Almacenamos la información del componente de vista en el estado de la aplicación llamado <i>page</i>. Esta información nos dice qué componente, que representa una vista, debe mostrarse debajo de la barra de menú.
 
-Sin embargo, el método no es muy óptimo. Como podemos ver en las imágenes, la dirección permanece igual aunque a veces estemos en diferentes vistas. Cada vista debe tener preferiblemente su propia dirección, por ejemplo, para hacer posible la creación de marcadores. El botón de <i>retroceso</i> tampoco funciona como se esperaba para nuestra aplicación, lo que significa que el botón de retroceso no lo mueve a la vista mostrada anteriormente de la aplicación, sino a un lugar completamente diferente. Si la aplicación creciera aún más y quisiéramos, por ejemplo, agregar vistas separadas para cada usuario y nota, entonces este <i>routing</i>(enrutamiento) hecho por nosotros mismos se volvería demasiado complicado, ya que administraríamos la navegación de la aplicación.
+Sin embargo, el método no es muy óptimo. Como podemos ver en las imágenes, la dirección permanece igual aunque a veces estemos en diferentes vistas. Cada vista debe tener preferiblemente su propia dirección, por ejemplo, para hacer posible la creación de marcadores. El botón de <i>retroceso</i> tampoco funciona como se esperaba para nuestra aplicación, lo que significa que el botón de retroceso no lo mueve a la vista mostrada anteriormente de la aplicación, sino a un lugar completamente diferente. 
+
+Si la aplicación creciera aún más y quisiéramos, por ejemplo, agregar vistas separadas para cada usuario y nota, entonces este <i>routing</i>(enrutamiento) hecho por nosotros mismos, se volvería demasiado complicado.
 
 ### React Router
 
-Afortunadamente, React tiene la librería [React router](https://github.com/ReactTraining/react-router), que proporciona una excelente solución para administrar la navegación en una aplicación React.
+Afortunadamente, React tiene la librería [React Router](https://github.com/ReactTraining/react-router), que proporciona una excelente solución para administrar la navegación en una aplicación React.
 
-Cambiemos la aplicación anterior para usar React router. Primero, instalemos React router con el comando
+Cambiemos la aplicación anterior para usar React Router. Primero, instalemos React Router con el comando:
 
 ```bash
 npm install react-router-dom
@@ -509,10 +511,10 @@ La aplicación se inicia de la forma habitual, pero primero debe instalar las de
 
 ```bash
 npm install
-npm start
+npm run dev
 ```
 
-### 7.1: anécdotas enrutadas, paso 1
+#### 7.1: anécdotas enrutadas, paso 1
 
 Agregue React Router a la aplicación para que al hacer clic en los enlaces del componente <i>Menu</i>, se pueda cambiar la vista.
 
@@ -522,7 +524,7 @@ En la raíz de la aplicación, es decir, la ruta _/_, muestra la lista de anécd
 
 El componente <i>Footer</i> siempre debe estar visible en la parte inferior.
 
-La creación de una nueva anécdota debería ocurrir, por ejemplo, en la ruta <i>create</i>:
+La creación de una nueva anécdota debería ocurrir en la ruta <i>create</i>:
 
 ![](../../assets/teht/41.png)
 
